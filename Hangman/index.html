@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hangman</title>
+    <link href="./styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h2>Hangman Game</h2>
+    <p>Find the hidden word - Enter a letter</p>
+    <div class="game_container">
+      <div class="wrong_word" id="wrong_word"></div>
+      <svg class="svg_container">
+        <!-- ROD -->
+        <line x1="50" y1="10" x2="80" y2="10"></line>
+        <line x1="80" y1="10" x2="80" y2="40"></line>
+        <line x1="50" y1="10" x2="50" y2="150"></line>
+        <line x1="30" y1="150" x2="70" y2="150"></line>
+        <!-- VICIM -->
+        <circle cx="80" cy="50" r="10" class="victim"></circle>
+        <line x1="80" y1="60" x2="80" y2="100" class="victim"></line>
+        <line x1="60" y1="60" x2="80" y2="75" class="victim"></line>
+        <line x1="100" y1="60" x2="80" y2="75" class="victim"></line>
+        <line x1="60" y1="125" x2="80" y2="100" class="victim"></line>
+        <line x1="80" y1="100" x2="100" y2="125" class="victim"></line>
+      </svg>
+      <div class="word" id="word">
+        <p id="letter"></p>
+      </div>
+    </div>
+    <div class="notification_container" id="notification_container">
+      <div class="notification">
+        <h2 id="finalMessage">You have won!</h2>
+        <button id="button">play Again</button>
+      </div>
+    </div>
+    <div class="warning" id="warning">
+      <p>You already Typed the letter</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
