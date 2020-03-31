@@ -4,22 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
     <link href="./styles.css" rel="stylesheet" type="text/css" />
     <title>Hamburger Button</title>
   </head>
   <body>
     <header>
       <h1>My profile Page</h1>
-      <div class="container" id="container">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </div>
+      <button class="hamburgerButton" id="hamburgerButton">
+        <i class="fas fa-bars fa-3x"></i>
+      </button>
       <p style="text-align: center; color:white">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit,
         maxime.
       </p>
-      <button class="sign_up" id="sign_up">Sign up</button>
+      <button class="general_button" id="sign_up_button">Sign up</button>
     </header>
     <nav id="nav" class="nav">
       <img src="../hyeonbeom.jpeg" , alt="hyeonbeom picture" />
@@ -66,6 +70,36 @@
         ipsam totam voluptatem incidunt aliquam, amet eligendi aspernatur
         tempora tempore nobis deleniti.
       </p>
+    </div>
+    <div class="form-container" id="form-container">
+      <form>
+        <header>
+          <h1>Sign up</h1>
+          <button class="cancel_button" id="cancel_button">
+            <i class="fas fa-times fa-2x"></i>
+          </button>
+        </header>
+        <p>
+          Register with us to get offers, support and more
+        </p>
+        <p>
+          <label>Name</label><br />
+          <input type="text" placeholder="Enter Name" />
+        </p>
+        <p>
+          <label>Email</label><br />
+          <input type="text" placeholder="Enter Email" />
+        </p>
+        <p>
+          <label>Password</label><br />
+          <input type="text" placeholder="Enter Password" />
+        </p>
+        <p>
+          <label>Confirm Password</label><br />
+          <input type="text" placeholder="Confirm Password" />
+        </p>
+        <button class="general_button" id="submit_button">Submit</button>
+      </form>
     </div>
     <script src="script.js"></script>
   </body>
