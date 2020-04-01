@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo+2&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  background-color: #f7f7f7;
+  font-family: "Baloo 2", cursive;
+}
+
+header {
+  text-align: center;
+  height: 50px;
+  margin-block-end: 16px;
+}
+
+h3 {
+  margin: 0px;
+}
+h4 {
+  font-weight: normal;
+  margin-block-end: 0px;
+}
+
+hr {
+  margin-block-start: 0px;
+  margin-block-end: 16px;
+}
+
+ul {
+  padding: 0px;
+}
+
+.current_balance {
+  font-weight: bold;
+  font-size: 30px;
+  /* padding: 30px auto; */
+}
+
+.summary_container {
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin-block-start: 16px;
+}
+
+.summary_container > div {
+  flex: auto;
+  text-align: center;
+}
+
+.income > .display_income {
+  color: #00ff00;
+  margin: 0px;
+}
+
+.expense > .display_expense {
+  color: #ff0000;
+  margin: 0px;
+}
+
+.expense {
+  border-left: 1px solid;
+  border-spacing: 5px;
+}
+.history_container {
+  margin-block-start: 32px;
+  margin-block-end: 32px;
+}
+
+.each_history_container {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto;
+  height: auto;
+  font-size: 16px;
+  background-color: white;
+  padding: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.display_each_income {
+  padding-inline-end: 5px;
+  border-right: 5px solid #00ff00;
+}
+
+.display_each_expense {
+  padding-inline-end: 5px;
+  border-right: 5px solid #ff0000;
+}
+
+.transaction_container {
+  margin-block-start: 32px;
+  margin-block-end: 32px;
+}
+
+.transaction_input {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.transaction_amount {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.transaction_button {
+  display: block;
+  padding: 16px 32px;
+  margin: 0 auto;
+  margin-block-start: 16px;
+  border-radius: 8px;
+  background-color: #006400;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  border: none;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Money manager</title>
+    <link href="./styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <h2>Money Manger Review</h2>
+    </header>
+    <div class="balance_container">
+      <h3>Your Balance</h3>
+      <hr />
+      <span class="current_balance">$490</span>
+    </div>
+    <div class="summary_container">
+      <div class="income">
+        <h3>Income</h3>
+        <p class="display_income">$640</p>
+      </div>
+      <div class="expense">
+        <h3>Expense</h3>
+        <p class="display_expense">$150</p>
+      </div>
+    </div>
+    <div class="history_container">
+      <h3>History</h3>
+      <hr />
+      <div class="display_history">
+        <ul>
+          <li class="each_history_container">
+            Cash income
+            <span class="display_each_income">+500</span>
+          </li>
+          <li class="each_history_container">
+            Grocery
+            <span class="display_each_expense">-150</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="transaction_container">
+      <h3>Add new transaction</h3>
+      <hr />
+      <h4>Text</h4>
+      <input class="transaction_input" type="text" placeholder="Enter item" />
+      <h4>Amount</h4>
+      <input
+        class="transaction_amount"
+        type="text"
+        placeholder="Enter Amount"
+      />
+      <button class="transaction_button">Add transaction</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
