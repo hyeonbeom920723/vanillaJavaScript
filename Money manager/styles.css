@@ -34,11 +34,16 @@ hr {
 ul {
   padding: 0px;
 }
-
+/* .display_history {
+  position: relative;
+} */
 .current_balance {
   font-weight: bold;
   font-size: 30px;
-  /* padding: 30px auto; */
+}
+.float-left {
+  float: left;
+  clear: left;
 }
 
 .summary_container {
@@ -74,8 +79,20 @@ ul {
   margin-block-end: 32px;
 }
 
+.deleteHistory {
+  position: absolute;
+  left: -15px;
+  top: 10px;
+  display: none;
+}
+
+.each_history_container:hover .deleteHistory {
+  display: block;
+}
+
 .each_history_container {
   display: flex;
+  position: relative;
   justify-content: space-between;
   margin: 10px auto;
   height: auto;
@@ -100,7 +117,7 @@ ul {
   margin-block-end: 32px;
 }
 
-.transaction_input {
+.transaction_item {
   width: 100%;
   font-size: 16px;
   padding: 10px;

@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Money manager</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
     <link href="./styles.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
@@ -30,15 +36,15 @@
       <h3>History</h3>
       <hr />
       <div class="display_history">
-        <ul>
-          <li class="each_history_container">
-            Cash income
+        <ul id="display_each_history">
+          <!-- <li class="each_history_container">
+            <i class="fas fa-times fa-x deleteHistory"></i>Cash income
             <span class="display_each_income">+500</span>
           </li>
           <li class="each_history_container">
-            Grocery
+            <i class="fas fa-times fa-x deleteHistory"></i>Grocery
             <span class="display_each_expense">-150</span>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
@@ -46,14 +52,22 @@
       <h3>Add new transaction</h3>
       <hr />
       <h4>Text</h4>
-      <input class="transaction_input" type="text" placeholder="Enter item" />
+      <input
+        class="transaction_item"
+        id="transaction_item"
+        type="text"
+        placeholder="Enter item"
+      />
       <h4>Amount</h4>
       <input
         class="transaction_amount"
-        type="text"
+        id="transaction_amount"
+        type="number"
         placeholder="Enter Amount"
       />
-      <button class="transaction_button">Add transaction</button>
+      <button class="transaction_button" id="transaction_button">
+        Add transaction
+      </button>
     </div>
 
     <script src="script.js"></script>
