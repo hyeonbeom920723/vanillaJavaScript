@@ -3,24 +3,7 @@ const ul = document.getElementById("display_each_history");
 const transaction_label_el = document.getElementById("transaction_label");
 const transaction_amount_el = document.getElementById("transaction_amount");
 
-let transactions = [
-  {
-    label: "Cash Income",
-    amount: 500,
-  },
-  {
-    label: "Grocery",
-    amount: -150,
-  },
-  {
-    label: "Entertainment",
-    amount: -50,
-  },
-  {
-    label: "Tithing",
-    amount: -100,
-  },
-];
+let transactions = [];
 
 function displayTransaction(new_t) {
   // make list
@@ -58,11 +41,13 @@ function createTransaction(event) {
     // }
     // push the new object into the transactions
     transactions.push(new_t);
+
+    // display the new object by calling displayTranscation
+    displayTransaction(new_t);
+
     // reset the value for transaction label and amount
     transaction_label_el.value = "";
     transaction_amount_el.value = "";
-    // display the new object by calling displayTranscation
-    displayTransaction(new_t);
   }
 }
 
