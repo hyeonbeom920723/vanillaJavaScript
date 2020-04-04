@@ -51,23 +51,25 @@
     <div class="transaction_container">
       <h3>Add new transaction</h3>
       <hr />
-      <h4>Text</h4>
-      <input
-        class="transaction_item"
-        id="transaction_item"
-        type="text"
-        placeholder="Enter item"
-      />
-      <h4>Amount</h4>
-      <input
-        class="transaction_amount"
-        id="transaction_amount"
-        type="number"
-        placeholder="Enter Amount"
-      />
-      <button class="transaction_button" id="transaction_button">
-        Add transaction
-      </button>
+      <form id="form">
+        <label>Text<label>
+        <input
+          class="transaction_label"
+          id="transaction_label"
+          type="text"
+          placeholder="Enter item"
+        />
+        <label>Amount<label>
+        <input
+          class="transaction_amount"
+          id="transaction_amount"
+          type="number"
+          placeholder="Enter Amount"
+        />
+        <input type="submit" class="transaction_button" id="transaction_button">
+          Add transaction
+        </input>
+      </form>
     </div>
 
     <script src="script.js"></script>
