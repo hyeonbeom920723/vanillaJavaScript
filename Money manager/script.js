@@ -5,6 +5,7 @@ const transaction_amount_el = document.getElementById("transaction_amount");
 const display_income_el = document.getElementById("display_income");
 const display_expense_el = document.getElementById("display_expense");
 const display_current_balance_el = document.getElementById("current_balance");
+const deleteHistory_el = document.getElementsByClassName("deleteHistory");
 
 let transactions = [];
 function calSummary() {
@@ -25,6 +26,14 @@ function calSummary() {
   const current_balance = totalPositive + totalNegative;
   display_current_balance_el.innerHTML = "$" + current_balance;
 }
+
+function deleteTransaction(new_t_id) {
+  transactions.forEach((eachT, index) => {
+    eachT.id === new_t_id ? transactions.splice(index, 1) : "";
+  });
+  console.log(transactions);
+  init();
+}
 function displayTransaction(new_t) {
   // make list
   const list = document.createElement("li");
@@ -32,9 +41,9 @@ function displayTransaction(new_t) {
   list.classList.add("each_history_container", true);
   // put span in the list
 
-  list.innerHTML = `<i class="fas fa-times fa-x deleteHistory"></i>${
-    new_t.label
-  }<span class=${
+  list.innerHTML = `<i class="fas fa-times fa-x deleteHistory" onclick="deleteTransaction(${
+    new_t.id
+  })"></i>${new_t.label}<span class=${
     new_t.amount >= 0 ? "display_each_income" : "display_each_expense"
   }>${new_t.amount}</span>`;
   // put list in the ul (append)
@@ -50,6 +59,7 @@ function createTransaction(event) {
     const new_t = {
       label: transaction_label_el.value,
       amount: transaction_amount_el.value,
+      id: Math.floor(Math.random() * 100000),
     };
     // push the new object into the transactions
     transactions.push(new_t);
@@ -65,6 +75,8 @@ function createTransaction(event) {
 }
 
 function init() {
+  // reset the ul
+  ul.innerHTML = "";
   transactions.forEach((each_t) => {
     displayTransaction(each_t);
   });
