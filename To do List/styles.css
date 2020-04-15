@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo+2&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #87ceeb;
+  font-family: "Baloo 2", cursive;
+}
+h2 {
+  text-align: center;
+}
+ul {
+  list-style: none;
+  margin: auto;
+  padding: 0px;
+}
+.input_container {
+  position: relative;
+  /* border: 1px solid red; */
+  width: 30%;
+  margin: 0 auto;
+}
+input {
+  text-align: center;
+  width: 100%;
+  margin: 0px auto;
+  display: block;
+}
+.addList {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  font-size: 15px;
+}
+.list_container {
+  margin: 0 auto;
+  margin-top: 12px;
+  width: 50%;
+  /* border: 1px solid red; */
+}
+.each_list_container {
+  position: relative;
+
+  margin-top: 12px;
+  margin-bottom: 12px;
+  text-align: center;
+  font-size: 15px;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.deleteList {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  font-size: 15px;
+}

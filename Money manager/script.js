@@ -5,7 +5,6 @@ const transaction_amount_el = document.getElementById("transaction_amount");
 const display_income_el = document.getElementById("display_income");
 const display_expense_el = document.getElementById("display_expense");
 const display_current_balance_el = document.getElementById("current_balance");
-const deleteHistory_el = document.getElementsByClassName("deleteHistory");
 
 let transactions = [];
 function calSummary() {
