@@ -17,6 +17,11 @@ ul {
   padding: 0px;
 }
 
+.big_container {
+  display: flex;
+  /* align-items: center; */
+}
+
 .input_container {
   position: relative;
   width: 30%;
@@ -36,6 +41,9 @@ input {
   right: 3px;
   top: 3px;
   cursor: pointer;
+}
+
+.select_box {
 }
 
 .list_container {
@@ -60,7 +68,8 @@ input {
 }
 .checkDelete {
   transform: translateY(200%);
-  transition: transform 3s;
+  opacity: 0;
+  transition: all 2s;
 }
 .doneList {
   position: absolute;
@@ -68,7 +77,13 @@ input {
   top: 3px;
   cursor: pointer;
 }
-.checkDone {
+.completed {
   opacity: 0.5;
   text-decoration: line-through;
+}
+.show {
+  display: flex;
+}
+.hide {
+  display: none;
 }

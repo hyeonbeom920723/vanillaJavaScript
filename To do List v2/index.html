@@ -14,13 +14,22 @@
   </head>
   <body>
     <h2>To Do List</h2>
-    <div class="input_container">
-      <input type="text" placeholder="Enter a thing to do" id="input" />
-      <i class="fas fa-plus-circle addList" id="addList"></i>
+    <div class="big_container">
+      <div class="input_container">
+        <input type="text" placeholder="Enter a thing to do" id="input" />
+        <i class="fas fa-plus-circle addList" id="addList"></i>
+      </div>
+      <div>
+        <select class="select_box" id="select_box">
+          <option>All</option>
+          <option>Completed</option>
+          <option>Incompleted</option>
+        </select>
+      </div>
     </div>
     <div class="list_container">
-      <ul id="ul">
-        <!-- <li class="each_list">
+      <ul id="ul"></ul>
+      <!-- <li class="each_list">
           <span>First</span>
           <i class="fas fa-check-square doneList"></i><i class="fas fa-trash deleteList"></i>
         </li>
@@ -28,7 +37,6 @@
           <span>Second</span>
           <i class="fas fa-check-square doneList"></i><i class="fas fa-trash deleteList"></i>
         </li> -->
-      </ul>
     </div>
   </body>
   <script src="script.js"></script>
