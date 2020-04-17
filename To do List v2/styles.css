@@ -55,4 +55,20 @@ input {
   right: 3px;
   top: 3px;
   cursor: pointer;
+  /* transform: translateY(1000px);
+  transition: transform 3s; */
+}
+.checkDelete {
+  transform: translateY(200%);
+  transition: transform 3s;
+}
+.doneList {
+  position: absolute;
+  right: 30px;
+  top: 3px;
+  cursor: pointer;
+}
+.checkDone {
+  opacity: 0.5;
+  text-decoration: line-through;
 }
