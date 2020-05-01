@@ -9,6 +9,11 @@ p {
   text-align: center;
 }
 
+input {
+  width: 50px;
+  margin: 5px;
+}
+
 .code_container {
   display: flex;
   flex-direction: row;
