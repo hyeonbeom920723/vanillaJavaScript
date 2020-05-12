@@ -1,7 +1,8 @@
 const big_container_el = document.getElementById("big_container");
+const slider_el = document.getElementById("slider");
 
 const limit = 5;
-const page = 1;
+let page = 1;
 function getData() {
   // fetch API
   fetch(
@@ -15,27 +16,39 @@ function getData() {
       // console.log data
       console.log(data);
       // Put things
-      //   console.log(typeof data);
-      //   console.log(data[0].title);
       data.map(getDiv);
-      // Append
     });
 }
 function getDiv(each_data) {
-  // make list
+  // make div
   const div = document.createElement("div");
-  // put class in the list
+  // put class in the div
   div.classList.add("box_container");
-
   div.innerHTML = `<div class="box_id">${each_data.id}</div>
-  <div class="box">
-    <h3>
-      ${each_data.title}
-    </h3>
-    <p>
-    ${each_data.body}
-    </p>
-  </div>`;
+    <div class="box">
+      <h3>
+        ${each_data.title}
+      </h3>
+      <p>
+       ${each_data.body} 
+      </p>
+    </div>`;
+  big_container_el.append(div);
 }
 
-getData();
+function displayLoading() {
+  slider_el.classList.add("display");
+  page += 1;
+  getData();
+}
+
+init();
+
+function init() {
+  getData();
+}
+window.addEventListener("scroll", () => {
+  window.innerHeight + window.pageYOffset >= document.body.offsetHeight
+    ? displayLoading()
+    : slider_el.classList.remove("display");
+});
