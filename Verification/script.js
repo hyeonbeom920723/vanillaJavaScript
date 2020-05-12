@@ -1,17 +1,15 @@
-// move cursor
-
-// if number is correct alert
-const correct_code = [1, 2, 3, 4];
+const correct_code = [1, 5, 7, 7];
 const user_input = [];
-const code = document.getElementsByClassName("code");
-const code_container_el = document.getElementById("code_containe");
+
+const code_container_el = document.getElementById("code_container");
 const first_input_el = document.getElementById("first_input");
+const input_array = document.querySelectorAll(".input");
 
 first_input_el.focus();
 function check() {
   if (
     correct_code.length === user_input.length &&
-    correct_code.every((value, index) => {
+    user_input.every((value, index) => {
       return value === correct_code[index];
     })
   ) {
@@ -21,30 +19,30 @@ function check() {
     location.reload();
   }
 }
-// display four blank underscore
-//
-// focus the first one
-// get the input from the user
 
-// if the input is same
-function displayCode() {}
+input_array.forEach((input, index, array) => {
+  input.addEventListener("keyup", (event) => {
+    console.log(event.keyCode, "clicked");
 
-window.addEventListener("keydown", (e) => {
-  const number = parseInt(e.key.toLocaleLowerCase());
-  correct_codeList.map((each_code) => {
-    // console.log("ec", typeof each_code);
-    // console.log("number", typeof number);
-    // how to compare one by one(Not all together)
-    if (each_code === number) {
-      console.log("same");
+    // check if it's a valid number
+    if (event.keyCode >= 48 && event.keyCode <= 57) {
+      // push it to user_input array
+      user_input.push(parseInt(event.target.value));
+      // console.log(typeof user_input[0]);
+      console.log(user_input);
+
+      // console.log(index);
+      // console.log(array.length);
+      // focus on next input if possible
+      if (index + 1 < array.length) {
+        array[index + 1].focus();
+      } else {
+        check();
+      }
     } else {
-      console.log("different");
+      alert("Type numbers only");
+      event.target.value = "";
+      return;
     }
   });
 });
-
-function init() {
-  displayCode();
-}
-
-init();
