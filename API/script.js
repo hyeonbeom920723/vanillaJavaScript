@@ -38,8 +38,10 @@ function getDiv(each_data) {
 
 function displayLoading() {
   slider_el.classList.add("display");
-  page += 1;
-  getData();
+  setTimeout(() => {
+    page += 1;
+    getData();
+  }, 1000);
 }
 
 init();
@@ -48,7 +50,10 @@ function init() {
   getData();
 }
 window.addEventListener("scroll", () => {
-  window.innerHeight + window.pageYOffset >= document.body.offsetHeight
-    ? displayLoading()
-    : slider_el.classList.remove("display");
+  if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight) {
+    console.log("scroll downed");
+    displayLoading();
+  } else {
+    slider_el.classList.remove("display");
+  }
 });
